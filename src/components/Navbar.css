@@ -8,14 +8,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 50px;
-  background-color: rgba(0, 0, 0, 0.75);
+  padding-left: 10px;
+  background-color: rgba(3, 83, 71, 0.75);
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 40px;
+  gap: 13px;
   padding-right: 50px;
 }
 

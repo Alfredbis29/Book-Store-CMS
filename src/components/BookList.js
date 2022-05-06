@@ -1,30 +1,23 @@
-import React from 'react';
+import React from "react";
 
 const BookList = () => {
   const books = [
     {
       id: 1,
-      title: 'go',
-      author: 'out',
+      title: "Linters",
+      author: "alfred",
     },
     {
       id: 2,
-      title: 'go',
-      author: 'out',
-    },
-    {
-      id: 3,
-      title: 'go',
-      author: 'out',
+      title: "Jsx",
+      author: "Audry",
     },
   ];
   return (
     <ul>
       {books.map((book) => (
         <li key={book.id}>
-          {book.title}
-          {' '}
-          {book.author}
+          {book.title} {book.author}
           <button type="button">Remove</button>
         </li>
       ))}
