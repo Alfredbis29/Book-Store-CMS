@@ -4,7 +4,7 @@ import './Navbar.css';
 
 const NavBar = () => (
   <nav className="nav">
-    <h1 className="logo">BookStore CMS</h1>
+    <h1 className="logo">BookStore--CMS</h1>
     <ul className="nav-links">
       <li>
         <Link to="/" className="link">
