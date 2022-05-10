@@ -1,23 +1,51 @@
-import { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/books';
 
-import AddBook from './AddBook';
-import BookList from './BookList';
+import '../assets/book.css';
 
-const Books = () => {
-  const [booksList, setBooksList] = useState([]);
+const Books = (props) => {
+  const {
+    id, author, title, category,
+  } = props;
+  const dispatch = useDispatch();
 
-  const addBookHandler = (title, author) => {
-    setBooksList((prevBookList) => [
-      ...prevBookList,
-      { id: Math.random().toString(), title, author },
-    ]);
+  const deleteHandler = () => {
+    dispatch(removeBook(id));
   };
+
   return (
-    <div>
-      <AddBook addBook={addBookHandler} />
-      <BookList books={booksList} />
+    <div className="book-container">
+      <div key={id} className="book-row1">
+        <span>{category}</span>
+        <h2>{title}</h2>
+        <p>{author}</p>
+        <button type="button">Comments</button>
+        <button type="button" onClick={deleteHandler}>Remove</button>
+        <button type="button">Edit</button>
+      </div>
+
+      <div>
+        <span>metric</span>
+        <p>64%</p>
+        <span>completed</span>
+      </div>
+
+      <div>
+        <h4>CURRENT CHAPTERS</h4>
+        <p>Chapter 17</p>
+        <button type="button" className="update-progress">UPDATED PROGRESS</button>
+      </div>
     </div>
   );
+};
+
+Books.propTypes = {
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
 };
 
 export default Books;
