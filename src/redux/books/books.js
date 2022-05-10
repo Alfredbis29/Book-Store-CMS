@@ -8,7 +8,7 @@ export const addBook = (book) => ({ type: ADD_BOOK, payload: book });
 
 const books = (state = initialData, action) => {
   switch (action.type) {
-    case ADD_BOOK
+    case ADD_BOOK:
       return [...state, {
         id: Math.floor((Math.random() * 100) + 1),
         title: action.payload.title,
