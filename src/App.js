@@ -1,18 +1,26 @@
-import { Route, Routes } from 'react-router-dom';
-
+import { Fragment } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
-
-import Books from './components/Books';
-import Categories from './components/Categories';
-import NavBar from './components/NavBar';
+import BookList from './components/BookList';
+import Category from './components/Category';
+import FormList from './components/FormList';
+import Header from './components/Header';
 
 function App() {
   return (
     <>
-      <NavBar />
+      <Header />
       <Routes>
-        <Route exact path="/" element={<Books />} />
-        <Route path="/categories" element={<Categories />} />
+        <Route
+          path="/"
+          element={(
+            <>
+              <BookList />
+              <FormList />
+            </>
+)}
+        />
+        <Route path="/category" element={<Category />} />
       </Routes>
     </>
   );
