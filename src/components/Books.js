@@ -7,7 +7,7 @@ import '../assets/book.css';
 
 const Books = (props) => {
   const {
-    id, author, title, category
+    id, author, title, category,
   } = props;
   const dispatch = useDispatch();
 
