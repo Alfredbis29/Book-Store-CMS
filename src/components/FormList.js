@@ -10,6 +10,7 @@ const FormList = () => {
     e.preventDefault();
     const { title, author, category } = e.target.elements;
     const newBook = {
+      item_id: Math.random(),
       title: title.value,
       author: author.value,
       category: category.value,
