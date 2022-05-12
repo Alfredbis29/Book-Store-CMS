@@ -12,7 +12,7 @@ export const addBook = (book) => async (dispatch) => {
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
       'Access-Control-Allow-Origin': 'http://localhost:3000/',
-    },
+    }
   });
 
   if (data === 'Created') {
