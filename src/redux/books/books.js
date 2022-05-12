@@ -41,7 +41,6 @@ export const fetchBook = () => async (dispatch) => {
       payload: result.data,
     },
   );
-  console.log(result);
 };
 
 const books = (state = initialData, action) => {
