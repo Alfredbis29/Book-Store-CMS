@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import './pages.css';
 import { sentBook } from '../redux/books/Books';
 
-const Form = () => {
+function Form() {
   const initialFormState = {
     title: '', author: '', category: '',
   };
@@ -66,6 +66,6 @@ const Form = () => {
       </div>
     </form>
   );
-};
+}
 
 export default Form;

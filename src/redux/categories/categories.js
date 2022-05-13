@@ -1,5 +1,4 @@
 const CHECK_STATUS = 'bookStore/categories/CHECK_STATUS';
-
 const initialState = [];
 
 const categoriesReducer = (state = initialState, action) => {
