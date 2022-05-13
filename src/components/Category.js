@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { checkStatus } from '../redux/categories/categories';
 
-const Category = () => {
+function Category() {
   const dispatch = useDispatch();
   const checkStatusHandler = () => {
     dispatch(checkStatus());
@@ -14,6 +14,6 @@ const Category = () => {
       <p>{categories}</p>
     </div>
   );
-};
+}
 
 export default Category;

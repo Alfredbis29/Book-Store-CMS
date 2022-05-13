@@ -5,7 +5,7 @@ import './pages.css';
 // import progress from '../assets/progress.png';
 import { deleteBook } from '../redux/books/Books';
 
-const ItemBook = (props) => {
+function ItemBook(props) {
   const dispatch = useDispatch();
 
   const {
@@ -68,7 +68,7 @@ const ItemBook = (props) => {
       </div>
     </div>
   );
-};
+}
 
 ItemBook.propTypes = {
   id: PropTypes.string.isRequired,

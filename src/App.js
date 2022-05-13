@@ -5,16 +5,18 @@ import Navbar from './components/Navigation';
 import Books from './components/appBook';
 import Categories from './components/PageCateg';
 
-const App = () => (
-  <Router>
-    <Navbar />
-    <section className="content">
-      <Routes>
-        <Route path="/*" element={<Books />} />
-        <Route path="/categories" element={<Categories />} />
-      </Routes>
-    </section>
-  </Router>
-);
+function App() {
+  return (
+    <Router>
+      <Navbar />
+      <section className="content">
+        <Routes>
+          <Route path="/*" element={<Books />} />
+          <Route path="/categories" element={<Categories />} />
+        </Routes>
+      </section>
+    </Router>
+  );
+}
 
 export default App;
