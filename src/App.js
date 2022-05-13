@@ -1,28 +1,21 @@
-import { Fragment } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import BookList from './components/BookList';
-import Category from './components/Category';
-import FormList from './components/FormList';
-import Header from './components/Header';
+import Navbar from './components/Navigation';
+import Books from './components/appBook';
+import Categories from './components/PageCateg';
 
 function App() {
   return (
-    <>
-      <Header />
-      <Routes>
-        <Route
-          path="/"
-          element={(
-            <>
-              <BookList />
-              <FormList />
-            </>
-)}
-        />
-        <Route path="/category" element={<Category />} />
-      </Routes>
-    </>
+    <Router>
+      <Navbar />
+      <section className="content">
+        <Routes>
+          <Route path="/*" element={<Books />} />
+          <Route path="/categories" element={<Categories />} />
+        </Routes>
+      </section>
+    </Router>
   );
 }
 

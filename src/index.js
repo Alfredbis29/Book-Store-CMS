@@ -1,17 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
+import './index.css';
 import App from './App';
 import store from './redux/configureStore';
+import { getBook } from './redux/books/Books';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+store.dispatch(getBook);
+
+ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </BrowserRouter>
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
+  document.getElementById('root'),
 );
