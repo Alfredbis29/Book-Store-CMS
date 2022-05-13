@@ -3,7 +3,7 @@ import './pages.css';
 import ItemBook from './elements';
 import Form from './ListForm';
 
-function Books() {
+const Books = () => {
   const bookList = useSelector((state) => state.booksReducer);
 
   return (
@@ -24,6 +24,6 @@ function Books() {
       <Form />
     </section>
   );
-}
+};
 
 export default Books;

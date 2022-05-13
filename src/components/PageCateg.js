@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { checkStatus } from '../redux/categories/categories';
 import './pages.css';
 
-function Categories() {
+const Categories = () => {
   const status = useSelector((state) => state.categoriesReducer);
   const dispatch = useDispatch();
 
@@ -17,6 +17,6 @@ function Categories() {
       <button className="btn-c-solid" onClick={handleClick} type="button">Check status</button>
     </>
   );
-}
+};
 
 export default Categories;
