@@ -14,7 +14,7 @@ const booksReducer = (state = initialState, action) => {
     case GET_BOOK:
       return [...state, action.payload];
     default:
-      return state;
+      return state
   }
 };
 
